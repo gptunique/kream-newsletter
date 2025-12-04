@@ -1,0 +1,1 @@
+ALTER TABLE `userAlerts` MODIFY COLUMN `thresholdPercent` int;

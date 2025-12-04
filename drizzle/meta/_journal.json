@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1764529526908,
+      "tag": "0000_last_lenny_balinger",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1764529650100,
+      "tag": "0001_foamy_trauma",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1764540867906,
+      "tag": "0002_hard_santa_claus",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1764569946069,
+      "tag": "0003_worthless_the_fury",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1764570163567,
+      "tag": "0004_hot_bloodstrike",
+      "breakpoints": true
+    }
+  ]
+}
