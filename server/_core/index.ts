@@ -58,14 +58,10 @@ async function startServer() {
     serveStatic(app);
   }
 
-  const preferredPort = parseInt(process.env.PORT || "3000");
-  const port = await findAvailablePort(preferredPort);
+  // Railway provides PORT env var, use it directly in production
+  const port = parseInt(process.env.PORT || "3000");
 
-  if (port !== preferredPort) {
-    console.log(`Port ${preferredPort} is busy, using port ${port} instead`);
-  }
-
-  server.listen(port,'0.0.0.0', () =>{
+  server.listen(port, '0.0.0.0', () => {
     console.log(`Server running on http://0.0.0.0:${port}/`);
   });
 }
