@@ -162,3 +162,9 @@
 - [x] 드래그 오버 시 시각적 피드백
 - [x] 파일 드롭 이벤트 핸들러 구현
 - [x] 여러 파일 드롭 시 첫 번째 파일만 처리
+
+## Railway Deployment Issue
+- [ ] Railway 배포 환경에서 스크래핑 실패 원인 진단 (Database not available 에러)
+- [ ] Railway 환경에 맞게 스크래핑 로직 수정
+- [ ] GitHub에 코드 푸시 및 Railway 자동 배포
+- [ ] Railway 환경에서 스크래핑 기능 테스트
