@@ -1,0 +1,65 @@
+services:
+  # Web Service (Node.js + Express + Playwright)
+  - type: web
+    name: kream-newsletter
+    runtime: node
+    region: singapore
+    plan: starter
+    buildCommand: pnpm install && pnpm playwright install --with-deps chromium && pnpm run build
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: OAUTH_SERVER_URL
+        sync: false
+      - key: VITE_APP_ID
+        sync: false
+      - key: VITE_OAUTH_PORTAL_URL
+        sync: false
+      - key: OWNER_OPEN_ID
+        sync: false
+      - key: OWNER_NAME
+        sync: false
+      - key: BUILT_IN_FORGE_API_URL
+        sync: false
+      - key: BUILT_IN_FORGE_API_KEY
+        sync: false
+      - key: VITE_FRONTEND_FORGE_API_KEY
+        sync: false
+      - key: VITE_FRONTEND_FORGE_API_URL
+        sync: false
+      - key: VITE_APP_TITLE
+        value: "KREAM 스니커즈 랭킹"
+      - key: VITE_APP_LOGO
+        value: ""
+      - key: VITE_ANALYTICS_ENDPOINT
+        value: ""
+      - key: VITE_ANALYTICS_WEBSITE_ID
+        value: ""
+
+  # MySQL Database
+  - type: pserv
+    name: kream-newsletter-db
+    runtime: docker
+    plan: starter
+    region: singapore
+    dockerfilePath: ./Dockerfile.mysql
+    disk:
+      name: mysql-data
+      mountPath: /var/lib/mysql
+      sizeGB: 10
+    envVars:
+      - key: MYSQL_ROOT_PASSWORD
+        generateValue: true
+      - key: MYSQL_DATABASE
+        value: railway
+      - key: MYSQL_USER
+        value: kream
+      - key: MYSQL_PASSWORD
+        generateValue: true

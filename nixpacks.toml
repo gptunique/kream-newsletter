@@ -1,0 +1,45 @@
+[phases.setup]
+nixPkgs = [
+  "nodejs_22",
+  "pnpm",
+  "chromium",
+  "nss",
+  "freetype",
+  "harfbuzz",
+  "ca-certificates",
+  "fontconfig",
+  "libX11",
+  "libXcomposite",
+  "libXdamage",
+  "libXext",
+  "libXfixes",
+  "libXrandr",
+  "libxcb",
+  "libxkbcommon",
+  "libdrm",
+  "mesa",
+  "expat",
+  "alsa-lib",
+  "at-spi2-atk",
+  "at-spi2-core",
+  "atk",
+  "cups",
+  "dbus",
+  "glib",
+  "gtk3",
+  "pango",
+  "nspr"
+]
+
+[phases.install]
+cmds = [
+  "pnpm install --frozen-lockfile",
+  "pnpm playwright install chromium",
+  "pnpm playwright install-deps chromium"
+]
+
+[phases.build]
+cmds = ["pnpm run build"]
+
+[start]
+cmd = "pnpm start"

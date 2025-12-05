@@ -168,3 +168,11 @@
 - [ ] Railway 환경에 맞게 스크래핑 로직 수정
 - [ ] GitHub에 코드 푸시 및 Railway 자동 배포
 - [ ] Railway 환경에서 스크래핑 기능 테스트
+
+## Render.com Deployment
+- [ ] Render.com 배포를 위한 render.yaml 설정 파일 생성
+- [ ] Playwright 의존성 설치 스크립트 작성
+- [ ] GitHub에 코드 푸시
+- [ ] Render.com에서 서비스 생성
+- [ ] 환경 변수 설정 (DATABASE_URL, JWT_SECRET 등)
+- [ ] 배포 테스트 및 스크래핑 기능 검증
